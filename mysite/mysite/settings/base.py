@@ -78,6 +78,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'wagtail.contrib.settings.context_processors.settings',
             ],
         },
     },
@@ -141,7 +142,7 @@ STATICFILES_DIRS = [
     (os.path.join("mysite", "mysite", "assets"), PROJECT_DIR / "assets"),
 ]
 
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "/static/"
 
 MEDIA_ROOT = BASE_DIR / "media"
