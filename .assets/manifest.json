@@ -1,0 +1,8 @@
+{
+  "mysite/mysite/static/js/mysite.js": {
+    "file": "django-assets/test-BAtrESL8.js",
+    "name": "test",
+    "src": "mysite/mysite/static/js/mysite.js",
+    "isEntry": true
+  }
+}
