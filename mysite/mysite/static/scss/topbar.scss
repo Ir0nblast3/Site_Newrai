@@ -1,9 +1,8 @@
 .navbar-nav .nav-link{
-    font-size: 18px;
-    font-family: $font-family-base;
-    letter-spacing: 2px;
-    align-items: end;
-    color: $secondary !important;
+  font-size: 15px;
+  font-family: $font-family-base;
+  align-items: end;
+  color: $primary !important;
 }
 
 .navbar{
@@ -14,14 +13,12 @@
 }
 
 .navbar-brand{
-    align-items: end;
-    padding-bottom: 0;
+  align-items: end;
+  padding-bottom: 0;
 }
 
 .nav-link.active{
-    text-decoration: underline;
-    text-decoration-color: $primary;
-    text-underline-offset: 8px;
+  font-weight: bold;
 }
 
 .navbar-toggler-icon {
@@ -29,7 +26,7 @@
 }
 
 .navbar-toggler {
-  border: 1px solid $secondary;
+  border: 1px solid $primary;
   align-self: center;
 }
 
@@ -39,4 +36,9 @@
 
 .navbar.scrolled {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+.text{
+  font-family: $font-family-base;
+  font-size: 10px;
 }

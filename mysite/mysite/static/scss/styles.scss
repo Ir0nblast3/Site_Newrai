@@ -1,6 +1,9 @@
 
 // Required
+@import "./fonts";
 @import "bootstrap/scss/functions";
+
+@import "./variables";
 
 // Required
 @import "bootstrap/scss/variables";
@@ -50,3 +53,4 @@
 @import "bootstrap/scss/utilities/api";
 
 @import "./topbar";
+@import "./hero.scss";
