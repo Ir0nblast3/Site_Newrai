@@ -1,9 +1,28 @@
 .hero-title{
-    font-family: $headings-font-family;
+    font-family: "Chillax-Regular";
     font-size: $h2-font-size;
+}
+
+.hero-title b {
+    font-family: "Chillax-Semibold";
 }
 
 .hero-text{
     font-family: $font-family-base;
-    font-size: 22px;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.hero-text b {
+    font-family: "Satoshi-Bold";
+}
+
+.hero-image{
+    transform: translateX(90px);
+}
+
+.hero-button{
+    font-family: 'Satoshi-Black';
+    font-size: 18px;
+    letter-spacing: 1.2px;
 }

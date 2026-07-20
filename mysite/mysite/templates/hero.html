@@ -1,11 +1,31 @@
 {% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
 
-<section class="bg-white text-secondary py-5" id="hero">
-    <div class="container-xxl text-center mt-5 mb-5 mycontainer">
+<section class="bg-white text-secondary py-5 overflow-hidden" id="hero">
+    <div class="container-xxl mt-5 mb-5 mycontainer">
 
         <div class="row align-items-top">
-            <h2 class="hero-title text-primary">{{ page.hero_title }}</h2>
-            <p class="hero-text text-primary">{{ page.hero_subtitle }}</p>
+
+            <div class="col-6 text-start">
+
+                <h2 class="hero-title text-primary mb-5">
+                    {{ page.hero_title|richtext }}
+                </h2>
+
+                <div class="hero-text text-primary mb-5 me-5 pe-5">
+                    {{ page.hero_subtitle|richtext }}
+                </div>
+
+                <a href="#" class="hero-button btn btn-primary rounded-pill mt-4 px-5 py-3">DÉCOUVRIR NOS OFFRES</a>
+
+            </div>
+
+            <div class="col-6">
+                {% if page.hero_image %}
+                    {% image page.hero_image width-1050 class="hero-image" %}
+                {% endif %}
+            </div>
+
         </div>
 
     </div>

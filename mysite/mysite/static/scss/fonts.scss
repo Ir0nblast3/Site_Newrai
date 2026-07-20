@@ -35,3 +35,14 @@
   font-display: swap;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Chillax-Regular';
+  src: url('/static/fonts/Chillax-Regular.woff2') format('woff2'),
+       url('/static/fonts/Chillax-Regular.woff') format('woff'),
+       url('/static/fonts/Chillax-Regular.ttf') format('truetype'),
+       url('/static/fonts/Chillax-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
