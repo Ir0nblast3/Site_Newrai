@@ -7,13 +7,25 @@
           
         </div>
 
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-between">
+
             <div class="col-4 d-flex align-items-center">
                 <a class="ftr-link pe-2" href="#">Mentions Légales</a>
                 <div class="border-end border-1 border-primary" style="height: 12px;"></div>
                 <a class="ftr-link pe-2 ps-2" href="#">Politique de confidentialité</a>
                 <div class="border-end border-1 border-primary" style="height: 12px;"></div>
                 <a class="ftr-link ps-2" href="#">CGV</a>
+            </div>
+
+            <div class="col-4 d-flex align-items-center justify-content-between">
+               <p class="ftr-text text-primary mb-0">Développé par : <span class="text-devby">{{ settings.base.FooterSettings.developed_by }}</span></p>
+               <p class="ftr-text text-primary mb-0">© Copyright newRai 2026. Tous droits réservés.</p>
+            </div>
+
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                {% if settings.base.FooterSettings.finaciamento_icon %}
+                    {% image settings.base.FooterSettings.finaciamento_icon width-350 class="img-fluid" %}
+                {% endif %}
             </div>
           
         </div>

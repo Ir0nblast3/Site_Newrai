@@ -17,3 +17,21 @@ class NavigationSettings(BaseGenericSetting):
     panels = [
         FieldPanel("logo"),
     ]
+
+@register_setting
+class FooterSettings(BaseGenericSetting):
+    
+    developed_by = models.CharField("Developed by",max_length=255,blank=True)
+
+    finaciamento_icon=models.ForeignKey(
+        "wagtailimages.Image",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="+"
+    )
+
+    panels = [
+        FieldPanel("developed_by"),
+        FieldPanel("finaciamento_icon"),
+    ]
