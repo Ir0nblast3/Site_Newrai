@@ -21,6 +21,14 @@ class NavigationSettings(BaseGenericSetting):
 @register_setting
 class FooterSettings(BaseGenericSetting):
     
+    newRai_icon=models.ForeignKey(
+        "wagtailimages.Image",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="+"
+    )
+
     developed_by = models.CharField("Developed by",max_length=255,blank=True)
 
     finaciamento_icon=models.ForeignKey(
@@ -32,6 +40,7 @@ class FooterSettings(BaseGenericSetting):
     )
 
     panels = [
+        FieldPanel("newRai_icon"),
         FieldPanel("developed_by"),
         FieldPanel("finaciamento_icon"),
     ]

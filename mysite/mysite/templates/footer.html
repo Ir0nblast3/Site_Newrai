@@ -1,9 +1,22 @@
 {% load wagtailimages_tags %}
 
-<footer class="bg-white text-secondary py-4" id="contactus">
+<footer class="bg-dark text-secondary py-4" id="contactus">
     <div class="container-xxl text-center mt-5">
         <div class="row justify-content-between">
+            <div class="col-3 d-flex flex-column align-items-start justify-content-between">
+                <div class="img-mb">
+                    {% if settings.base.FooterSettings.newRai_icon %}
+                        {% image settings.base.FooterSettings.newRai_icon  width-150 class="img-fluid" %}
+                    {% endif %}
+                </div>
 
+                <div class="text-start mt-5 mb-5">
+                    <p class="ftr-title text-primary mymargin">Pourquoi choisir la PA newRai ?</p>
+                    <a href="#" class="hero-button btn btn-primary rounded-pill px-5 py-3">DÉCOUVREZ</a>
+                    <p class="text-primary mt-3"><strong>by:</strong></p>
+                </div>
+                
+            </div>
           
         </div>
 
