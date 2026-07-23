@@ -27,3 +27,34 @@
     font-size: 16px;
     letter-spacing: 1.2px;
 }
+
+.hero-txt{
+    font-family: "Chillax-Regular";
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.hero-txt b{
+    font-family: "Chillax-Semibold";
+
+}
+
+.enterprise-box{
+    aspect-ratio: 1 / 1;
+    border-right: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+}
+
+.enterprise-box:nth-child(6n) {
+    border-right: none;
+}
+
+.enterprise-box:nth-last-child(-n+6) {
+    border-bottom: none;
+}
+
+.enterprises-toggler {
+    position: absolute;
+    left: 20px;
+    
+}

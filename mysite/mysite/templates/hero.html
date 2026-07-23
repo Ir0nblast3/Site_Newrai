@@ -16,7 +16,7 @@
                     {{ page.hero_subtitle|richtext }}
                 </div>
 
-                <a href="#" class="hero-button btn btn-primary rounded-pill mt-4 px-5 py-3">DÉCOUVRIR NOS OFFRES</a>
+                <a href="#" class="hero-button btn btn-primary rounded-pill mt-4 px-5 py-3 mb-4">DÉCOUVRIR NOS OFFRES</a>
 
             </div>
 
@@ -28,5 +28,27 @@
 
         </div>
 
+        <button class="navbar-toggler enterprises-toggler mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#enterprisesCollapse" aria-controls="enterprisesCollapse" aria-expanded="false" aria-label="Toggle enterprises"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse mt-5" id="enterprisesCollapse">
+
+            <div class="row">
+                <div class="col-5 hero-txt text-primary">
+                    {{ page.hero_text|richtext }}
+                </div>
+            </div>
+
+            <div class="row mt-5 mb-5">
+                {% for enterprise in page.enterprises.all %}
+                    <div class="col-2 enterprise-box d-flex justify-content-center align-items-center">
+                        <div class="enterprise-box border-start border-end">
+                            {% image enterprise.enterprise_img original class="img-fluid" %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        
     </div>
 </section>

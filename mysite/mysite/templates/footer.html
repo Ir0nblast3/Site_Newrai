@@ -2,7 +2,7 @@
 
 <footer class="bg-dark text-secondary py-4" id="contactus">
     <div class="container-xxl text-center mt-5">
-        <div class="row justify-content-between">
+        <div class="row justify-content-between mb-5">
             <div class="col-3 d-flex flex-column align-items-start justify-content-between">
                 <div class="img-mb">
                     {% if settings.base.FooterSettings.newRai_icon %}
@@ -10,12 +10,68 @@
                     {% endif %}
                 </div>
 
-                <div class="text-start mt-5 mb-5">
+                <div class="text-start mt-5">
                     <p class="ftr-title text-primary mymargin">Pourquoi choisir la PA newRai ?</p>
                     <a href="#" class="hero-button btn btn-primary rounded-pill px-5 py-3">DÉCOUVREZ</a>
-                    <p class="text-primary mt-3"><strong>by:</strong></p>
+                    <p class="text-primary mt-3 mb-0"><strong>by:</strong></p>
                 </div>
                 
+            </div>
+
+            <div class="col-3 d-flex flex-column align-items-start justify-content-end">
+                <p class="ftr-title text-primary mb-0">Nos Applications</p>
+                <p class="text-primary mb-0">NeoScanPro</p>
+                <p class="text-primary mb-0">NeoPlus</p>
+                <p class="text-primary mb-0">NeoFact</p>
+                <p class="text-primary mb-0">NeoPilotage</p>
+                <p class="text-primary mb-0">NeoFrais</p>
+                <p class="text-primary mb-0">NeoTréso</p>
+                <p class="text-primary mb-0">NeoPA</p>
+                <p class="text-primary mb-0">NeoSSI</p>
+                <p class="text-primary mb-0">NeoCoffre</p>
+                <p class="text-primary mb-0">NeoNRD</p>
+                <p class="text-primary mb-0">NeoBudget</p>
+            </div>
+
+            <div class="col-3 d-flex flex-column align-items-start justify-content-end">
+                <p class="ftr-title2 text-primary mb-4">Transformer mon cabinet</p>
+
+                <div class="text-start mb-4">
+                    <p class="ftr-title text-primary mb-0">Pourquoi choisir new Rai ?</p>
+                    <p class="text-primary mb-0">Qui sommes-nous</p>
+                    <p class="text-primary mb-0">Notre mission</p>
+                    <p class="text-primary mb-0">Nos valeurs</p>
+                </div>
+
+                <div class="text-start mb-4">
+                    <p class="ftr-title text-primary mb-0">Nous rejoindre</p>
+                    <p class="text-primary mb-0">Rejoignez l’équipe</p>
+                </div>
+
+                <div class="text-start">
+                    {% for social in settings.base.FooterSettings.socials.all %}
+                        <a href="{{ social.url }}" target="_blank">
+                            {% image social.image original %}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card rounded-5  overflow-hidden" style="width: 18rem;">
+                    <div class="card-body">
+                        <p class="ftr-title text-primary text-start mt-2">Nous contacter</p>
+                        <div class="row align-items-start">
+                            <p class="text-primary text-start mb-0">04 12 28 01 30</p>
+                            <p class="text-primary text-start mb-1">04 12 28 03 64</p>
+                            <a href="mailto:{{ settings.base.FooterSettings.email }}" class="text-decoration-none text-primary text-start">{{ settings.base.FooterSettings.email }}</a>
+                        </div>
+                    </div>
+                    {% if settings.base.FooterSettings.card_image %}
+                        {% image settings.base.FooterSettings.card_image original class="img-fluid" %}
+                    {% endif %}
+                </div>
+
             </div>
           
         </div>
