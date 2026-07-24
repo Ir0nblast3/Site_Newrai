@@ -1,0 +1,41 @@
+{% load wagtailimages_tags %}
+
+<section class="bg-white text-primary">
+    <div class="container-xxl text-center mt-5 mb-5 mycontainer">
+        <h2 class="mb-5 mc-title">Transformer mon cabinet</h2>
+
+        <div class="row align-items-top">
+            <div class="d-flex justify-content-center gap-3">
+                <div class="border border-2 border-primary rounded-2 p-4">NeoScanPro</div>
+                <div class="border border-2 border-primary rounded-2 p-4">NeoSSI</div>
+                <div class="border border-2 border-primary rounded-2 p-4">NeoFact</div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="text-center">
+                {% if page.moncabinet_pc %}
+                    {% image page.moncabinet_pc width-1050 class="img-fluid" %}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row align-items-top mt-5">
+            <div class="d-flex justify-content-center gap-2">
+                <div class="col-4 mc-text border-end border-primary text-start">
+                    <p>{{ page.mc_text1 }}</p>
+                </div>
+
+                <div class="col-4 mc-text border-end border-primary text-start">
+                    <p>{{ page.mc_text2 }}</p>
+                </div>
+
+                <div class="col-4 mc-text text-start">
+                    <p>{{ page.mc_text3 }}</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>   
+</section>

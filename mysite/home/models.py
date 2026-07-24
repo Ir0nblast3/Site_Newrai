@@ -46,9 +46,21 @@ class HomePage(Page):
     )
 
     hero_text = RichTextField(
-         blank=True,
+        blank=True,
         features=["bold", "italic"]
     )
+
+    moncabinet_pc = models.ForeignKey(
+        "wagtailimages.Image",
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="+",
+    )
+
+    mc_text1 = models.CharField(max_length=255, blank=True) 
+    mc_text2 = models.CharField(max_length=255, blank=True) 
+    mc_text3 = models.CharField(max_length=255, blank=True) 
 
     content_panels = Page.content_panels + [
         FieldPanel("hero_title"),
@@ -56,4 +68,8 @@ class HomePage(Page):
         FieldPanel("hero_image"),
         FieldPanel("hero_text"),
         InlinePanel("enterprises", label="Enterprises"),
+        FieldPanel("moncabinet_pc"),
+        FieldPanel("mc_text1"),
+        FieldPanel("mc_text2"),
+        FieldPanel("mc_text3"),
     ]
